@@ -50,40 +50,45 @@ class TelaDashboard extends StatelessWidget {
 
             const SizedBox(height: 16.0),
 
-            // EXERCÍCIO 07
-            // Cards de estatísticas usando BlocoEstatistica
-            Row(
+            // EXERCÍCIO 08
+            // GRID DE ESTATÍSTICAS 2x2
+            GridView.count(
+              crossAxisCount: 2,
+              crossAxisSpacing: 12.0,
+              mainAxisSpacing: 12.0,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
               children: [
-                Expanded(
-                  child: BlocoEstatistica(
-                    icone: Icons.flutter_dash,
-                    quantidade: '124',
-                    legenda: 'Aves Vistas',
-                    cor: Colors.teal.shade100,
-                  ),
+                // CARD 1
+                BlocoEstatistica(
+                  icone: Icons.flutter_dash,
+                  quantidade: '124',
+                  legenda: 'Aves Vistas',
+                  cor: Colors.teal.shade100,
                 ),
 
-                const SizedBox(width: 12.0),
-
-                Expanded(
-                  child: BlocoEstatistica(
-                    icone: Icons.place,
-                    quantidade: '18',
-                    legenda: 'Locais Visitados',
-                    cor: Colors.teal.shade50,
-                  ),
+                // CARD 2
+                BlocoEstatistica(
+                  icone: Icons.place,
+                  quantidade: '18',
+                  legenda: 'Locais Visitados',
+                  cor: Colors.teal.shade50,
                 ),
 
-                const SizedBox(width: 12.0),
-
-                // EXERCÍCIO 04
-                // Expanded continua removido propositalmente
+                // CARD 3
                 BlocoEstatistica(
                   icone: Icons.camera_alt,
-                  quantidade:
-                      '45 Fotos de Observacoes Registradas no Parque Central Durante a Semana',
+                  quantidade: '45',
                   legenda: 'Fotos',
                   cor: Colors.teal.shade100,
+                ),
+
+                // CARD 4
+                BlocoEstatistica(
+                  icone: Icons.list_alt,
+                  quantidade: '32',
+                  legenda: 'Registros',
+                  cor: Colors.teal.shade50,
                 ),
               ],
             ),
@@ -105,7 +110,6 @@ class TelaDashboard extends StatelessWidget {
               clipBehavior: Clip.none,
               children: [
                 // EXERCÍCIO 06
-                // Card com elevation 4
                 Card(
                   elevation: 4,
                   child: Container(
@@ -175,7 +179,6 @@ class TelaDashboard extends StatelessWidget {
                   ),
                 ),
 
-                // EXERCÍCIO 05
                 // SELO 2: CONFIRMADO
                 Positioned(
                   bottom: -8,
