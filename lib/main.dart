@@ -36,7 +36,7 @@ class TelaDashboard extends StatelessWidget {
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          // Exercício 02
+          // EXERCÍCIO 02
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
@@ -128,7 +128,7 @@ class TelaDashboard extends StatelessWidget {
 
                 // CARD 3
                 // EXERCÍCIO 04:
-                // Expanded foi REMOVIDO propositalmente.
+                // Expanded continua removido propositalmente.
                 Container(
                   padding: const EdgeInsets.all(16.0),
                   decoration: BoxDecoration(
@@ -222,7 +222,7 @@ class TelaDashboard extends StatelessWidget {
                   ),
                 ),
 
-                // SELO RARO
+                // SELO 1: RARO
                 Positioned(
                   top: -8,
                   right: -8,
@@ -237,6 +237,31 @@ class TelaDashboard extends StatelessWidget {
                     ),
                     child: const Text(
                       'Raro',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+
+                // EXERCÍCIO 05
+                // SELO 2: CONFIRMADO
+                Positioned(
+                  bottom: -8,
+                  left: -8,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 5,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: const Text(
+                      'Confirmado',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 10,
