@@ -36,10 +36,8 @@ class TelaDashboard extends StatelessWidget {
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          // EXERCÍCIO 02:
-          // Alterado de start para center
+          // Exercício 02
           crossAxisAlignment: CrossAxisAlignment.center,
-
           children: [
             const Text(
               'Resumo das Observacoes',
@@ -177,7 +175,7 @@ class TelaDashboard extends StatelessWidget {
 
             const SizedBox(height: 16.0),
 
-            // SOBREPOSIÇÃO usando Stack
+            // CARD DE DESTAQUE
             Stack(
               clipBehavior: Clip.none,
               children: [
@@ -223,6 +221,7 @@ class TelaDashboard extends StatelessWidget {
                   ),
                 ),
 
+                // SELO "RARO"
                 Positioned(
                   top: -8,
                   right: -8,
@@ -246,6 +245,51 @@ class TelaDashboard extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+
+            const SizedBox(height: 32.0),
+
+            // EXERCÍCIO 03
+            // SEÇÃO "ÚLTIMOS REGISTROS"
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: Colors.grey.shade100,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(
+                  color: Colors.grey.shade300,
+                ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // ÍCONE + TEXTO
+                  const Row(
+                    children: [
+                      Icon(
+                        Icons.list,
+                        color: Colors.teal,
+                        size: 28,
+                      ),
+                      SizedBox(width: 10),
+                      Text(
+                        'Últimos Registros',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  // BOTÃO
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Ver todos'),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
