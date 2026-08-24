@@ -49,7 +49,7 @@ class TelaDashboard extends StatelessWidget {
 
             const SizedBox(height: 16.0),
 
-            // LINHA 1: Cards
+            // LINHA 1: CARDS DE ESTATÍSTICAS
             Row(
               children: [
                 // CARD 1
@@ -128,7 +128,7 @@ class TelaDashboard extends StatelessWidget {
 
                 // CARD 3
                 // EXERCÍCIO 04:
-                // Expanded continua removido propositalmente.
+                // Expanded continua removido propositalmente
                 Container(
                   padding: const EdgeInsets.all(16.0),
                   decoration: BoxDecoration(
@@ -182,43 +182,50 @@ class TelaDashboard extends StatelessWidget {
             Stack(
               clipBehavior: Clip.none,
               children: [
-                Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.all(20.0),
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade100,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(
-                      color: Colors.grey.shade300,
+                // EXERCÍCIO 06:
+                // Container substituído por Card
+                Card(
+                  elevation: 4,
+                  child: Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(20.0),
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade100,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: Colors.grey.shade300,
+                      ),
                     ),
-                  ),
-                  child: Row(
-                    children: [
-                      const Icon(
-                        Icons.star,
-                        size: 48,
-                        color: Colors.amber,
-                      ),
-                      const SizedBox(width: 16),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            'Gaviao-Real',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.star,
+                          size: 48,
+                          color: Colors.amber,
+                        ),
+
+                        const SizedBox(width: 16),
+
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              'Gaviao-Real',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
-                          Text(
-                            'Avistado no Parque Central',
-                            style: TextStyle(
-                              color: Colors.grey,
+                            Text(
+                              'Avistado no Parque Central',
+                              style: TextStyle(
+                                color: Colors.grey,
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
 
@@ -246,7 +253,6 @@ class TelaDashboard extends StatelessWidget {
                   ),
                 ),
 
-                // EXERCÍCIO 05
                 // SELO 2: CONFIRMADO
                 Positioned(
                   bottom: -8,
@@ -275,7 +281,7 @@ class TelaDashboard extends StatelessWidget {
 
             const SizedBox(height: 32.0),
 
-            // EXERCÍCIO 03
+            // EXERCÍCIO 03:
             // ÚLTIMOS REGISTROS
             Container(
               width: double.infinity,
@@ -307,6 +313,7 @@ class TelaDashboard extends StatelessWidget {
                       ),
                     ],
                   ),
+
                   ElevatedButton(
                     onPressed: () {},
                     child: const Text('Ver todos'),
