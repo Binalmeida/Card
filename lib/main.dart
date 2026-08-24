@@ -36,7 +36,10 @@ class TelaDashboard extends StatelessWidget {
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          // EXERCÍCIO 02:
+          // Alterado de start para center
+          crossAxisAlignment: CrossAxisAlignment.center,
+
           children: [
             const Text(
               'Resumo das Observacoes',
@@ -48,7 +51,7 @@ class TelaDashboard extends StatelessWidget {
 
             const SizedBox(height: 16.0),
 
-            // LINHA 1: 3 Cards Lado a Lado usando Expanded
+            // LINHA 1: 3 Cards usando Expanded
             Row(
               children: [
                 // CARD 1
@@ -125,7 +128,7 @@ class TelaDashboard extends StatelessWidget {
 
                 const SizedBox(width: 12.0),
 
-                // CARD 3 - NOVO
+                // CARD 3
                 Expanded(
                   child: Container(
                     padding: const EdgeInsets.all(16.0),
@@ -174,8 +177,7 @@ class TelaDashboard extends StatelessWidget {
 
             const SizedBox(height: 16.0),
 
-            // SOBREPOSICAO usando Stack
-            // Selo de Notificacao sobre o Card
+            // SOBREPOSIÇÃO usando Stack
             Stack(
               clipBehavior: Clip.none,
               children: [
