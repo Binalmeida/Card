@@ -49,7 +49,7 @@ class TelaDashboard extends StatelessWidget {
 
             const SizedBox(height: 16.0),
 
-            // LINHA 1: 3 Cards usando Expanded
+            // LINHA 1: Cards
             Row(
               children: [
                 // CARD 1
@@ -127,37 +127,40 @@ class TelaDashboard extends StatelessWidget {
                 const SizedBox(width: 12.0),
 
                 // CARD 3
-                Expanded(
-                  child: Container(
-                    padding: const EdgeInsets.all(16.0),
-                    decoration: BoxDecoration(
-                      color: Colors.teal.shade100,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Column(
-                      children: const [
-                        Icon(
-                          Icons.camera_alt,
-                          size: 36,
-                          color: Colors.teal,
+                // EXERCÍCIO 04:
+                // Expanded foi REMOVIDO propositalmente.
+                Container(
+                  padding: const EdgeInsets.all(16.0),
+                  decoration: BoxDecoration(
+                    color: Colors.teal.shade100,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Column(
+                    children: const [
+                      Icon(
+                        Icons.camera_alt,
+                        size: 36,
+                        color: Colors.teal,
+                      ),
+                      SizedBox(height: 8),
+
+                      // TEXTO EXTREMAMENTE LONGO
+                      Text(
+                        '45 Fotos de Observacoes Registradas no Parque Central Durante a Semana',
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
                         ),
-                        SizedBox(height: 8),
-                        Text(
-                          '45',
-                          style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                          ),
+                      ),
+
+                      Text(
+                        'Fotos',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.grey,
                         ),
-                        Text(
-                          'Fotos',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -196,9 +199,7 @@ class TelaDashboard extends StatelessWidget {
                         size: 48,
                         color: Colors.amber,
                       ),
-
                       const SizedBox(width: 16),
-
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
@@ -221,7 +222,7 @@ class TelaDashboard extends StatelessWidget {
                   ),
                 ),
 
-                // SELO "RARO"
+                // SELO RARO
                 Positioned(
                   top: -8,
                   right: -8,
@@ -250,7 +251,7 @@ class TelaDashboard extends StatelessWidget {
             const SizedBox(height: 32.0),
 
             // EXERCÍCIO 03
-            // SEÇÃO "ÚLTIMOS REGISTROS"
+            // ÚLTIMOS REGISTROS
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(16.0),
@@ -264,7 +265,6 @@ class TelaDashboard extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // ÍCONE + TEXTO
                   const Row(
                     children: [
                       Icon(
@@ -282,8 +282,6 @@ class TelaDashboard extends StatelessWidget {
                       ),
                     ],
                   ),
-
-                  // BOTÃO
                   ElevatedButton(
                     onPressed: () {},
                     child: const Text('Ver todos'),
